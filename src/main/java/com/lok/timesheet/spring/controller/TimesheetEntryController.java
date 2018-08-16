@@ -13,12 +13,20 @@ public class TimesheetEntryController {
 	@GetMapping(value ="/enter-timesheet")
 	public String enterTimesheet() {
 		System.out.println("go to sign in");
-		return "timesheet/timesheet-entry.html";
+		return "timesheet/timesheet-entry";
 	}
 	@RequestMapping("/start-shift")
 	public String startYourShift(@ModelAttribute("midProfileForm") SignInForm signInForm)
 	 {
 		System.out.println("start your shift");
-		return "timesheet/timesheet-success.html";
+		return "timesheet/timesheet-success";
+	}
+	
+	
+@RequestMapping("/enter-time")
+	public String thymeleafTemplate()
+	 {
+		System.out.println("start your shift");
+		return "timesheet/enter-time";
 	}
 }
